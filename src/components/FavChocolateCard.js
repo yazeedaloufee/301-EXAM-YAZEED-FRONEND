@@ -6,24 +6,26 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 class ChocolateCard extends Component {
 
-    addToFav=(e)=>{
+    // addToFav=(e)=>{
      
-        let favchoco=null;
-        this.props.alldata.map(value=>{
+    //     let favchoco=null;
+    //     this.props.alldata.map(value=>{
       
 
-            if(Number(e.target.id)===Number(value.id)){favchoco=value}
-        })
-        const { user } = this.props.auth0;
-        console.log(user.email,'emaaaaaaaaaail')
-        favchoco.email=user.email;
+    //         if(Number(e.target.id)===Number(value.id)){favchoco=value}
+    //     })
+    //     const { user } = this.props.auth0;
+    //     console.log(user.email,'emaaaaaaaaaail')
+    //     favchoco.email=user.email;
 
-        axios.post(`${process.env.REACT_APP_SERVER}/addtofav`,favchoco).then(results=>{
-            console.log(results);
-            this.props.updatedData(results);
-        })
+    //     axios.post(`${process.env.REACT_APP_SERVER}/addtofav`,favchoco).then(results=>{
+    //         console.log(results);
+    //         this.props.updatedData(results);
+    //     })
    
-    }
+    // }
+
+    
 
 render(){
 return(
